@@ -1,0 +1,16 @@
+{% extends 'mainapp/layout.html' %}
+
+{%block title%} DELETE contact {%endblock%}
+
+{% block content %}
+    <div class="features">
+        <h1>Delete contact forms</h1>
+
+        <form method="post">
+            {% csrf_token %}
+
+            <button class="btn btn-warning">Delete contact</button>
+
+        </form>
+    </div>
+{% endblock %}

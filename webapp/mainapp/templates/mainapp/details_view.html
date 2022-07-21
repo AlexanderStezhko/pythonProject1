@@ -1,0 +1,17 @@
+{% extends 'mainapp/layout.html' %}
+
+{%block title%} din page {%endblock%}
+
+{% block content %}
+    <div class="features">
+        <h1>{{contact.first_name}}</h1>
+        <p>{{contact.second_name}}</p>
+        <p>{{contact.address}}</p>
+        <p>{{contact.tel_number}}</p>
+        <p>{{contact.registration_date}}</p>
+        <a href="{% url 'details_delete_contact' contact.id %}" class="btn btn-warning">Delete</a>
+        <a href="{% url 'details_updete_contact' contact.id %}" class="btn btn-warning">Update</a>
+
+
+    </div>
+{% endblock %}

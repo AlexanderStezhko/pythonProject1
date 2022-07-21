@@ -1,0 +1,19 @@
+{% extends 'mainapp/layout.html' %}
+
+{%block title%} Add contact {%endblock%}
+
+{% block content %}
+    <div class="features">
+        <h1>Add contat forms</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{form.first_name}}<br>
+            {{form.second_name}}<br>
+            {{form.address}}<br>
+            {{form.tel_number}}<br>
+            {{form.registration_date}}<br>
+            <button class="btn btn-success" type="submit">Добавить</button>
+            <span>{{error}}</span>
+        </form>
+    </div>
+{% endblock %}

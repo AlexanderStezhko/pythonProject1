@@ -1,0 +1,15 @@
+{% extends 'mainapp/layout.html'%}
+
+
+{%block title%} Title page {%endblock%}
+
+{%block content%}
+    <h1>Title page's text</h1>
+    <button class="btn btn-warning">Кнопка</button>
+    {% for i in Contact %}
+        <div class="alert alert-warning">
+            <h1>{{i.first_name}}</h1>
+            <a href="{% url 'details_contact' i.id %}" class="btn btn-warning">Просмотреть полностью</a>
+        </div>
+    {%endfor%}
+{%endblock%}
